@@ -1,0 +1,1602 @@
+%Merlin.mbs v4.21 2009-07-09.
+\begin{thebibliography}{100}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \ifx #1\undefined \expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+\fi
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+\fi
+}%
+\providecommand \enquote [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand\href[0]{\@sanitize\@href}%
+\providecommand\@href[1]{\endgroup\@@startlink{#1}\endgroup\@@href}%
+\providecommand\@@href[1]{#1\@@endlink}%
+\providecommand \@sanitize [0]{\begingroup\catcode`\&12\catcode`\#12\relax}%
+\@ifxundefined \pdfoutput {\@firstoftwo}{%
+ \@ifnum{\z@=\pdfoutput}{\@firstoftwo}{\@secondoftwo}%
+}{%
+ \providecommand\@@startlink[1]{\leavevmode\special{html:<a href="#1">}}%
+ \providecommand\@@endlink[0]{\special{html:</a>}}%
+}{%
+ \providecommand\@@startlink[1]{%
+  \leavevmode
+  \pdfstartlink
+   attr{/Border[0 0 1 ]/H/I/C[0 1 1]}%
+   user{/Subtype/Link/A<</Type/Action/S/URI/URI(#1)>>}%
+  \relax
+ }%
+ \providecommand\@@endlink[0]{\pdfendlink}%
+}%
+\providecommand \url  [0]{\begingroup\@sanitize \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix}}%
+\providecommand \urlprefix [0]{URL }%
+\providecommand \Eprint[0]{\href }%
+\@ifxundefined \urlstyle {%
+  \providecommand \doi [1]{doi:\discretionary{}{}{}#1}%
+}{%
+  \providecommand \doi [0]{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url }%
+}%
+\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \Doi[1]{\href{\doibase#1}}%
+\providecommand \bibAnnote [3]{%
+  \BibitemShut{#1}%
+  \begin{quotation}\noindent
+    \textsc{Key:}\ #2\\\textsc{Annotation:}\ #3%
+  \end{quotation}%
+}%
+\providecommand \bibAnnoteFile [2]{%
+  \IfFileExists{#2}{\bibAnnote {#1} {#2} {\input{#2}}}{}%
+}%
+\providecommand \typeout [0]{\immediate \write \m@ne }%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo [0]{\@secondoftwo}%
+\providecommand \bibfield [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen[0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut [1]{\csname bibitem#1\endcsname}%
+%</preamble>
+\bibitem{fermilab}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibnamefont{Fermilab}},\ }%
+  \enquote{\bibinfo {title} {{Fermilab}},}\ \bibinfo {howpublished}
+  {\url{http://www.fnal.gov}}%
+  \bibAnnoteFile{NoStop}{fermilab}%
+%%CITATION = NONE;%%
+\bibitem{Schwetz:2011zk}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Thomas}\ \bibnamefont{Schwetz}}, \bibinfo
+  {author} {\bibfnamefont{Mariam}\ \bibnamefont{Tortola}},\ and\ \bibinfo
+  {author} {\bibfnamefont{J.W.F.}\ \bibnamefont{Valle}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Where we are on $\theta_{13}$: addendum to
+  'Global neutrino data and recent reactor fluxes: status of three-flavour
+  oscillation parameters'}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1367-2630/13/10/109401}{\bibinfo {journal} {New J.Phys.}}\ }%
+  \textbf{\bibinfo {volume} {13}},\ \bibinfo {pages} {109401} (\bibinfo {year}
+  {2011}),\ \bibinfo {note} {* Temporary entry *},\
+  \Eprint{http://arxiv.org/abs/1108.1376}{arXiv:1108.1376 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Schwetz:2011zk}%
+\bibitem{Davidson:2008bu}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Sacha}\ \bibnamefont{Davidson}}, \bibinfo
+  {author} {\bibfnamefont{Enrico}\ \bibnamefont{Nardi}},\ and\ \bibinfo
+  {author} {\bibfnamefont{Yosef}\ \bibnamefont{Nir}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Leptogenesis}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/j.physrep.2008.06.002}{\bibinfo {journal} {Phys. Rept.}}\ }%
+  \textbf{\bibinfo {volume} {466}},\ \bibinfo {pages} {105--177} (\bibinfo
+  {year} {2008}),\ \Eprint{http://arxiv.org/abs/0802.2962}{arXiv:0802.2962
+  [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Davidson:2008bu}%
+%%CITATION = 0802.2962;%%
+\bibitem{Bertone:2004pz}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Gianfranco}\ \bibnamefont{Bertone}},
+  \bibinfo {author} {\bibfnamefont{Dan}\ \bibnamefont{Hooper}},\ and\ \bibinfo
+  {author} {\bibfnamefont{Joseph}\ \bibnamefont{Silk}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Particle dark matter: Evidence, candidates and
+  constraints}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/j.physrep.2004.08.031}{\bibinfo {journal} {Phys. Rept.}}\ }%
+  \textbf{\bibinfo {volume} {405}},\ \bibinfo {pages} {279--390} (\bibinfo
+  {year} {2005}),\
+  \Eprint{http://arxiv.org/abs/hep-ph/0404175}{arXiv:hep-ph/0404175}%
+  \bibAnnoteFile{NoStop}{Bertone:2004pz}%
+%%CITATION = HEP-PH/0404175;%%
+\bibitem{Jungman:1995df}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Gerard}\ \bibnamefont{Jungman}}, \bibinfo
+  {author} {\bibfnamefont{Marc}\ \bibnamefont{Kamionkowski}},\ and\ \bibinfo
+  {author} {\bibfnamefont{Kim}\ \bibnamefont{Griest}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Supersymmetric dark matter}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/0370-1573(95)00058-5}{\bibinfo {journal} {Phys. Rept.}}\ }%
+  \textbf{\bibinfo {volume} {267}},\ \bibinfo {pages} {195--373} (\bibinfo
+  {year} {1996}),\
+  \Eprint{http://arxiv.org/abs/hep-ph/9506380}{arXiv:hep-ph/9506380}%
+  \bibAnnoteFile{NoStop}{Jungman:1995df}%
+%%CITATION = HEP-PH/9506380;%%
+\bibitem{Amsler:2008zzb}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Claude}\ \bibnamefont{Amsler}} \emph{et~al.}
+  (\bibinfo {collaboration} {Particle Data Group}),\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Review of particle physics}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/j.physletb.2008.07.018}{\bibinfo {journal} {Phys. Lett.}}\ }%
+  \textbf{\bibinfo {volume} {B667}},\ \bibinfo {pages} {1--1340} (\bibinfo
+  {year} {2008})%
+  \bibAnnoteFile{NoStop}{Amsler:2008zzb}%
+%%CITATION = PHLTA,B667,1;%%
+\bibitem{Bertone:2010}%
+  \BibitemOpen
+  \emph{\bibinfo {title} {{Particle Dark Matter: Observations, Models and
+  Searches}}},\ edited by\ \bibinfo {editor}
+  {\bibfnamefont{G.}~\bibnamefont{Bertone}}\ (\bibinfo {publisher} {Cambridge
+  University Press},\ \bibinfo {year} {2010})%
+  \bibAnnoteFile{NoStop}{Bertone:2010}%
+\bibitem{Baltz:2006fm}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Edward~A.}\ \bibnamefont{Baltz}}, \bibinfo
+  {author} {\bibfnamefont{Marco}\ \bibnamefont{Battaglia}}, \bibinfo {author}
+  {\bibfnamefont{Michael~E.}\ \bibnamefont{Peskin}},\ and\ \bibinfo {author}
+  {\bibfnamefont{Tommer}\ \bibnamefont{Wizansky}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Determination of dark matter properties at
+  high-energy colliders}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.74.103521}{\bibinfo {journal} {Phys. Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D74}},\ \bibinfo {pages} {103521} (\bibinfo {year}
+  {2006}),\ \Eprint{http://arxiv.org/abs/hep-ph/0602187}{arXiv:hep-ph/0602187}%
+  \bibAnnoteFile{NoStop}{Baltz:2006fm}%
+%%CITATION = HEP-PH/0602187;%%
+\bibitem{Cho:2008tj}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Won~Sang}\ \bibnamefont{Cho}}, \bibinfo
+  {author} {\bibfnamefont{Kiwoon}\ \bibnamefont{Choi}}, \bibinfo {author}
+  {\bibfnamefont{Yeong~Gyun}\ \bibnamefont{Kim}},\ and\ \bibinfo {author}
+  {\bibfnamefont{Chan~Beom}\ \bibnamefont{Park}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{$M_T$2-assisted on-shell reconstruction of
+  missing momenta and its application to spin measurement at the LHC}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.79.031701}{\bibinfo {journal} {Phys. Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D79}},\ \bibinfo {pages} {031701} (\bibinfo {year}
+  {2009}),\ \Eprint{http://arxiv.org/abs/0810.4853}{arXiv:0810.4853 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Cho:2008tj}%
+%%CITATION = 0810.4853;%%
+\bibitem{Nath:2010zj}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Pran}\ \bibnamefont{Nath}} \emph{et~al.},\
+  }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{The Hunt for New Physics at the Large Hadron
+  Collider}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/j.nuclphysbps.2010.03.001}{\bibinfo {journal} {Nucl. Phys. Proc.
+  Suppl.}}\ }%
+  \textbf{\bibinfo {volume} {200-202}},\ \bibinfo {pages} {185--417} (\bibinfo
+  {year} {2010}),\ \Eprint{http://arxiv.org/abs/1001.2693}{arXiv:1001.2693
+  [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Nath:2010zj}%
+%%CITATION = 1001.2693;%%
+\bibitem{Green:2007rb}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Anne~M.}\ \bibnamefont{Green}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Determining the WIMP mass using direct detection
+  experiments}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1475-7516/2007/08/022}{\bibinfo {journal} {JCAP}}\ }%
+  \textbf{\bibinfo {volume} {0708}},\ \bibinfo {pages} {022} (\bibinfo {year}
+  {2007}),\ \Eprint{http://arxiv.org/abs/hep-ph/0703217}{arXiv:hep-ph/0703217}%
+  \bibAnnoteFile{NoStop}{Green:2007rb}%
+%%CITATION = HEP-PH/0703217;%%
+\bibitem{Bertone:2007xj}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{G.}~\bibnamefont{Bertone}}, \bibinfo
+  {author} {\bibfnamefont{David~G.}\ \bibnamefont{Cerdeno}}, \bibinfo {author}
+  {\bibfnamefont{J.~I.}\ \bibnamefont{Collar}},\ and\ \bibinfo {author}
+  {\bibfnamefont{Brian~C.}\ \bibnamefont{Odom}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{WIMP identification through a combined
+  measurement of axial and scalar couplings}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevLett.99.151301}{\bibinfo {journal} {Phys. Rev. Lett.}}\
+  }%
+  \textbf{\bibinfo {volume} {99}},\ \bibinfo {pages} {151301} (\bibinfo {year}
+  {2007}),\ \Eprint{http://arxiv.org/abs/0705.2502}{arXiv:0705.2502
+  [astro-ph]}%
+  \bibAnnoteFile{NoStop}{Bertone:2007xj}%
+%%CITATION = 0705.2502;%%
+\bibitem{Drees:2008bv}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Manuel}\ \bibnamefont{Drees}}\ and\ \bibinfo
+  {author} {\bibfnamefont{Chung-Lin}\ \bibnamefont{Shan}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Model-Independent Determination of the WIMP Mass
+  from Direct Dark Matter Detection Data}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1475-7516/2008/06/012}{\bibinfo {journal} {JCAP}}\ }%
+  \textbf{\bibinfo {volume} {0806}},\ \bibinfo {pages} {012} (\bibinfo {year}
+  {2008}),\ \Eprint{http://arxiv.org/abs/0803.4477}{arXiv:0803.4477 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Drees:2008bv}%
+%%CITATION = 0803.4477;%%
+\bibitem{Green:2008rd}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Anne~M.}\ \bibnamefont{Green}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Determining the WIMP mass from a single direct
+  detection experiment, a more detailed study}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1475-7516/2008/07/005}{\bibinfo {journal} {JCAP}}\ }%
+  \textbf{\bibinfo {volume} {0807}},\ \bibinfo {pages} {005} (\bibinfo {year}
+  {2008}),\ \Eprint{http://arxiv.org/abs/0805.1704}{arXiv:0805.1704 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Green:2008rd}%
+%%CITATION = 0805.1704;%%
+\bibitem{Bertone:2007aw}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Gianfranco}\ \bibnamefont{Bertone}},
+  \bibinfo {author} {\bibfnamefont{Wilfried}\ \bibnamefont{Buchmuller}},
+  \bibinfo {author} {\bibfnamefont{Laura}\ \bibnamefont{Covi}},\ and\ \bibinfo
+  {author} {\bibfnamefont{Alejandro}\ \bibnamefont{Ibarra}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Gamma-Rays from Decaying Dark Matter}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1475-7516/2007/11/003}{\bibinfo {journal} {JCAP}}\ }%
+  \textbf{\bibinfo {volume} {0711}},\ \bibinfo {pages} {003} (\bibinfo {year}
+  {2007}),\ \Eprint{http://arxiv.org/abs/0709.2299}{arXiv:0709.2299
+  [astro-ph]}%
+  \bibAnnoteFile{NoStop}{Bertone:2007aw}%
+%%CITATION = 0709.2299;%%
+\bibitem{Eichler:1989br}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{David}\ \bibnamefont{Eichler}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{TeV PARTICLES AS WEAKLY UNSTABLE DARK MATTER}},}\
+  }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevLett.63.2440}{\bibinfo {journal} {Phys.Rev.Lett.}}\ }%
+  \textbf{\bibinfo {volume} {63}},\ \bibinfo {pages} {2440} (\bibinfo {year}
+  {1989})%
+  \bibAnnoteFile{NoStop}{Eichler:1989br}%
+\bibitem{Arvanitaki:2008hq}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Asimina}\ \bibnamefont{Arvanitaki}},
+  \bibinfo {author} {\bibfnamefont{Savas}\ \bibnamefont{Dimopoulos}}, \bibinfo
+  {author} {\bibfnamefont{Sergei}\ \bibnamefont{Dubovsky}}, \bibinfo {author}
+  {\bibfnamefont{Peter~W.}\ \bibnamefont{Graham}}, \bibinfo {author}
+  {\bibfnamefont{Roni}\ \bibnamefont{Harnik}}, \emph{et~al.},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Astrophysical Probes of Unification}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.79.105022}{\bibinfo {journal} {Phys.Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D79}},\ \bibinfo {pages} {105022} (\bibinfo {year}
+  {2009}),\ \Eprint{http://arxiv.org/abs/0812.2075}{arXiv:0812.2075 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Arvanitaki:2008hq}%
+\bibitem{Ibarra:2008jk}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Alejandro}\ \bibnamefont{Ibarra}}\ and\
+  \bibinfo {author} {\bibfnamefont{David}\ \bibnamefont{Tran}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Decaying Dark Matter and the PAMELA Anomaly}},}\
+  }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1475-7516/2009/02/021}{\bibinfo {journal} {JCAP}}\ }%
+  \textbf{\bibinfo {volume} {0902}},\ \bibinfo {pages} {021} (\bibinfo {year}
+  {2009}),\ \Eprint{http://arxiv.org/abs/0811.1555}{arXiv:0811.1555 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Ibarra:2008jk}%
+\bibitem{Ibarra:2008qg}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Alejandro}\ \bibnamefont{Ibarra}}\ and\
+  \bibinfo {author} {\bibfnamefont{David}\ \bibnamefont{Tran}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Antimatter Signatures of Gravitino Dark Matter
+  Decay}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1475-7516/2008/07/002}{\bibinfo {journal} {JCAP}}\ }%
+  \textbf{\bibinfo {volume} {0807}},\ \bibinfo {pages} {002} (\bibinfo {year}
+  {2008}),\ \Eprint{http://arxiv.org/abs/0804.4596}{arXiv:0804.4596
+  [astro-ph]}%
+  \bibAnnoteFile{NoStop}{Ibarra:2008qg}%
+%%CITATION = 0804.4596;%%
+\bibitem{Buckley:2009kw}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Matthew~R.}\ \bibnamefont{Buckley}},
+  \bibinfo {author} {\bibfnamefont{Katherine}\ \bibnamefont{Freese}}, \bibinfo
+  {author} {\bibfnamefont{Dan}\ \bibnamefont{Hooper}}, \bibinfo {author}
+  {\bibfnamefont{Douglas}\ \bibnamefont{Spolyar}},\ and\ \bibinfo {author}
+  {\bibfnamefont{Hitoshi}\ \bibnamefont{Murayama}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{High-Energy Neutrino Signatures of Dark Matter
+  Decaying into Leptons}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.81.016006}{\bibinfo {journal} {Phys.Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D81}},\ \bibinfo {pages} {016006} (\bibinfo {year}
+  {2010}),\ \Eprint{http://arxiv.org/abs/0907.2385}{arXiv:0907.2385
+  [astro-ph.HE]}%
+  \bibAnnoteFile{NoStop}{Buckley:2009kw}%
+\bibitem{Ibarra:2009tn}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Alejandro}\ \bibnamefont{Ibarra}}\ and\
+  \bibinfo {author} {\bibfnamefont{David}\ \bibnamefont{Tran}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Antideuterons from Dark Matter Decay}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1475-7516/2009/06/004}{\bibinfo {journal} {JCAP}}\ }%
+  \textbf{\bibinfo {volume} {0906}},\ \bibinfo {pages} {004} (\bibinfo {year}
+  {2009}),\ \Eprint{http://arxiv.org/abs/0904.1410}{arXiv:0904.1410 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Ibarra:2009tn}%
+\bibitem{Ruderman:2009ta}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Joshua~T.}\ \bibnamefont{Ruderman}}\ and\
+  \bibinfo {author} {\bibfnamefont{Tomer}\ \bibnamefont{Volansky}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Searching for Smoking Gun Signatures of Decaying
+  Dark Matter}},}\ }%
+   (\bibinfo {year} {2009}),\
+  \Eprint{http://arxiv.org/abs/0907.4373}{arXiv:0907.4373 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Ruderman:2009ta}%
+\bibitem{:2008zzr}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{J.}~\bibnamefont{Chang}} \emph{et~al.},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{An excess of cosmic ray electrons at energies of
+  300-800 GeV}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1038/nature07477}{\bibinfo {journal} {Nature}}\ }%
+  \textbf{\bibinfo {volume} {456}},\ \bibinfo {pages} {362--365} (\bibinfo
+  {year} {2008})%
+  \bibAnnoteFile{NoStop}{:2008zzr}%
+%%CITATION = NATUA,456,362;%%
+\bibitem{Adriani:2008zr}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Oscar}\ \bibnamefont{Adriani}} \emph{et~al.}
+  (\bibinfo {collaboration} {PAMELA}),\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{An anomalous positron abundance in cosmic rays
+  with energies 1.5-100 GeV}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1038/nature07942}{\bibinfo {journal} {Nature}}\ }%
+  \textbf{\bibinfo {volume} {458}},\ \bibinfo {pages} {607--609} (\bibinfo
+  {year} {2009}),\ \Eprint{http://arxiv.org/abs/0810.4995}{arXiv:0810.4995
+  [astro-ph]}%
+  \bibAnnoteFile{NoStop}{Adriani:2008zr}%
+%%CITATION = 0810.4995;%%
+\bibitem{Abdo:2009zk}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Aous~A.}\ \bibnamefont{Abdo}} \emph{et~al.}
+  (\bibinfo {collaboration} {The Fermi LAT}),\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Measurement of the Cosmic Ray e+ plus e- spectrum
+  from 20 GeV to 1 TeV with the Fermi Large Area Telescope}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevLett.102.181101}{\bibinfo {journal} {Phys. Rev. Lett.}}\
+  }%
+  \textbf{\bibinfo {volume} {102}},\ \bibinfo {pages} {181101} (\bibinfo {year}
+  {2009}),\ \Eprint{http://arxiv.org/abs/0905.0025}{arXiv:0905.0025
+  [astro-ph.HE]}%
+  \bibAnnoteFile{NoStop}{Abdo:2009zk}%
+%%CITATION = 0905.0025;%%
+\bibitem{ams:2009}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibnamefont{CMS-02}},\ }%
+  \enquote{\bibinfo {title} {{The Alpha Magnetic Specrometer Experiment}},}\
+  \bibinfo {howpublished} {\url{http://ams.cern.ch/}}%
+  \bibAnnoteFile{NoStop}{ams:2009}%
+%%CITATION = NONE;%%
+\bibitem{Aprile:2011ts}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{E.}~\bibnamefont{Aprile}} \emph{et~al.}
+  (\bibinfo {collaboration} {XENON100}),\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Implications on Inelastic Dark Matter from 100
+  Live Days of XENON100 Data}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.84.061101}{\bibinfo {journal} {Phys. Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D84}},\ \bibinfo {pages} {061101} (\bibinfo {year}
+  {2011}),\ \Eprint{http://arxiv.org/abs/1104.3121}{arXiv:1104.3121
+  [astro-ph.CO]}%
+  \bibAnnoteFile{NoStop}{Aprile:2011ts}%
+%%CITATION = 1104.3121;%%
+\bibitem{Ahmed:2009zw}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Z.}~\bibnamefont{Ahmed}} \emph{et~al.}
+  (\bibinfo {collaboration} {The CDMS-II}),\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Dark Matter Search Results from the CDMS II
+  Experiment}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1126/science.1186112}{\bibinfo {journal} {Science}}\ }%
+  \textbf{\bibinfo {volume} {327}},\ \bibinfo {pages} {1619--1621} (\bibinfo
+  {year} {2010}),\ \Eprint{http://arxiv.org/abs/0912.3592}{arXiv:0912.3592
+  [astro-ph.CO]}%
+  \bibAnnoteFile{NoStop}{Ahmed:2009zw}%
+%%CITATION = 0912.3592;%%
+\bibitem{Ahmed:2010wy}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Z.}~\bibnamefont{Ahmed}} \emph{et~al.}
+  (\bibinfo {collaboration} {CDMS-II}),\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Results from a Low-Energy Analysis of the CDMS II
+  Germanium Data}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevLett.106.131302}{\bibinfo {journal} {Phys. Rev. Lett.}}\
+  }%
+  \textbf{\bibinfo {volume} {106}},\ \bibinfo {pages} {131302} (\bibinfo {year}
+  {2011}),\ \Eprint{http://arxiv.org/abs/1011.2482}{arXiv:1011.2482
+  [astro-ph.CO]}%
+  \bibAnnoteFile{NoStop}{Ahmed:2010wy}%
+%%CITATION = 1011.2482;%%
+\bibitem{Bernabei:2010mq}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{R.}~\bibnamefont{Bernabei}} \emph{et~al.},\
+  }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{New results from DAMA/LIBRA}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1140/epjc/s10052-010-1303-9}{\bibinfo {journal} {Eur. Phys. J.}}\ }%
+  \textbf{\bibinfo {volume} {C67}},\ \bibinfo {pages} {39--49} (\bibinfo {year}
+  {2010}),\ \Eprint{http://arxiv.org/abs/1002.1028}{arXiv:1002.1028
+  [astro-ph.GA]}%
+  \bibAnnoteFile{NoStop}{Bernabei:2010mq}%
+%%CITATION = 1002.1028;%%
+\bibitem{Aalseth:2011wp}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{C.~E.}\ \bibnamefont{Aalseth}}
+  \emph{et~al.},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Search for an Annual Modulation in a P-type Point
+  Contact Germanium Dark Matter Detector}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevLett.107.141301}{\bibinfo {journal} {Phys. Rev. Lett.}}\
+  }%
+  \textbf{\bibinfo {volume} {107}},\ \bibinfo {pages} {141301} (\bibinfo {year}
+  {2011}),\ \Eprint{http://arxiv.org/abs/1106.0650}{arXiv:1106.0650
+  [astro-ph.CO]}%
+  \bibAnnoteFile{NoStop}{Aalseth:2011wp}%
+%%CITATION = 1106.0650;%%
+\bibitem{Angloher:2011uu}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{G.}~\bibnamefont{Angloher}} \emph{et~al.},\
+  }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Results from 730 kg days of the CRESST-II Dark
+  Matter Search}},}\ }%
+   (\bibinfo {year} {2011}),\
+  \Eprint{http://arxiv.org/abs/1109.0702}{arXiv:1109.0702 [astro-ph.CO]}%
+  \bibAnnoteFile{NoStop}{Angloher:2011uu}%
+%%CITATION = 1109.0702;%%
+\bibitem{Billard:2011yf}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{J.}~\bibnamefont{Billard}}, \bibinfo
+  {author} {\bibfnamefont{F.}~\bibnamefont{Mayet}},\ and\ \bibinfo {author}
+  {\bibfnamefont{D.}~\bibnamefont{Santos}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Directional Detection of Dark Matter with
+  MIMAC}},}\ }%
+   (\bibinfo {year} {2011}),\
+  \Eprint{http://arxiv.org/abs/1110.5999}{arXiv:1110.5999 [astro-ph.IM]}%
+  \bibAnnoteFile{NoStop}{Billard:2011yf}%
+%%CITATION = 1110.5999;%%
+\bibitem{Pipe:2010zz}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Mark}\ \bibnamefont{Pipe}} (\bibinfo
+  {collaboration} {DRIFT Collaboration}),\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Progress report on DRIFT-II}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1742-6596/203/1/012031}{\bibinfo {journal} {J.Phys.Conf.Ser.}}\
+  }%
+  \textbf{\bibinfo {volume} {203}},\ \bibinfo {pages} {012031} (\bibinfo {year}
+  {2010})%
+  \bibAnnoteFile{NoStop}{Pipe:2010zz}%
+\bibitem{Martin:1997ns}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Stephen~P.}\ \bibnamefont{Martin}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{A Supersymmetry Primer}},}\ }%
+   (\bibinfo {year} {1997}),\
+  \Eprint{http://arxiv.org/abs/hep-ph/9709356}{arXiv:hep-ph/9709356}%
+  \bibAnnoteFile{NoStop}{Martin:1997ns}%
+%%CITATION = HEP-PH/9709356;%%
+\bibitem{Haber:1984rc}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Howard~E.}\ \bibnamefont{Haber}}\ and\
+  \bibinfo {author} {\bibfnamefont{Gordon~L.}\ \bibnamefont{Kane}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{The Search for Supersymmetry: Probing Physics
+  Beyond the Standard Model}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/0370-1573(85)90051-1}{\bibinfo {journal} {Phys. Rept.}}\ }%
+  \textbf{\bibinfo {volume} {117}},\ \bibinfo {pages} {75--263} (\bibinfo
+  {year} {1985})%
+  \bibAnnoteFile{NoStop}{Haber:1984rc}%
+%%CITATION = PRPLC,117,75;%%
+\bibitem{Ellis:1983ew}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{John~R.}\ \bibnamefont{Ellis}}, \bibinfo
+  {author} {\bibfnamefont{J.~S.}\ \bibnamefont{Hagelin}}, \bibinfo {author}
+  {\bibfnamefont{Dimitri~V.}\ \bibnamefont{Nanopoulos}}, \bibinfo {author}
+  {\bibfnamefont{Keith~A.}\ \bibnamefont{Olive}},\ and\ \bibinfo {author}
+  {\bibfnamefont{M.}~\bibnamefont{Srednicki}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Supersymmetric relics from the big bang}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/0550-3213(84)90461-9}{\bibinfo {journal} {Nucl. Phys.}}\ }%
+  \textbf{\bibinfo {volume} {B238}},\ \bibinfo {pages} {453--476} (\bibinfo
+  {year} {1984})%
+  \bibAnnoteFile{NoStop}{Ellis:1983ew}%
+%%CITATION = NUPHA,B238,453;%%
+\bibitem{Barbier:2004ez}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{R.}~\bibnamefont{Barbier}} \emph{et~al.},\
+  }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{R-parity violating supersymmetry}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/j.physrep.2005.08.006}{\bibinfo {journal} {Phys. Rept.}}\ }%
+  \textbf{\bibinfo {volume} {420}},\ \bibinfo {pages} {1--202} (\bibinfo {year}
+  {2005}),\ \Eprint{http://arxiv.org/abs/hep-ph/0406039}{arXiv:hep-ph/0406039}%
+  \bibAnnoteFile{NoStop}{Barbier:2004ez}%
+%%CITATION = HEP-PH/0406039;%%
+\bibitem{Diaz:1997xc}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Marco~A.}\ \bibnamefont{Diaz}}, \bibinfo
+  {author} {\bibfnamefont{Jorge~C.}\ \bibnamefont{Romao}},\ and\ \bibinfo
+  {author} {\bibfnamefont{J.W.F.}\ \bibnamefont{Valle}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Minimal supergravity with R-parity breaking}},}\
+  }%
+  \bibfield{journal}{%
+  \Doi{10.1016/S0550-3213(98)00234-X}{\bibinfo {journal} {Nucl.Phys.}}\ }%
+  \textbf{\bibinfo {volume} {B524}},\ \bibinfo {pages} {23--40} (\bibinfo
+  {year} {1998}),\
+  \Eprint{http://arxiv.org/abs/hep-ph/9706315}{arXiv:hep-ph/9706315 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Diaz:1997xc}%
+\bibitem{Hirsch:2000ef}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{M.}~\bibnamefont{Hirsch}}, \bibinfo {author}
+  {\bibfnamefont{M.A.}\ \bibnamefont{Diaz}}, \bibinfo {author}
+  {\bibfnamefont{W.}~\bibnamefont{Porod}}, \bibinfo {author}
+  {\bibfnamefont{J.C.}\ \bibnamefont{Romao}},\ and\ \bibinfo {author}
+  {\bibfnamefont{J.W.F.}\ \bibnamefont{Valle}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Neutrino masses and mixings from supersymmetry
+  with bilinear R parity violation: A Theory for solar and atmospheric neutrino
+  oscillations}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.62.113008, 10.1103/PhysRevD.65.119901}{\bibinfo
+  {journal} {Phys.Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D62}},\ \bibinfo {pages} {113008} (\bibinfo {year}
+  {2000}),\ \Eprint{http://arxiv.org/abs/hep-ph/0004115}{arXiv:hep-ph/0004115
+  [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Hirsch:2000ef}%
+\bibitem{Diaz:2003as}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{M.A.}\ \bibnamefont{Diaz}}, \bibinfo
+  {author} {\bibfnamefont{M.}~\bibnamefont{Hirsch}}, \bibinfo {author}
+  {\bibfnamefont{W.}~\bibnamefont{Porod}}, \bibinfo {author}
+  {\bibfnamefont{J.C.}\ \bibnamefont{Romao}},\ and\ \bibinfo {author}
+  {\bibfnamefont{J.W.F.}\ \bibnamefont{Valle}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Solar neutrino masses and mixing from bilinear R
+  parity broken supersymmetry: Analytical versus numerical results}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.68.013009, 10.1103/PhysRevD.71.059904}{\bibinfo
+  {journal} {Phys.Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D68}},\ \bibinfo {pages} {013009} (\bibinfo {year}
+  {2003}),\ \Eprint{http://arxiv.org/abs/hep-ph/0302021}{arXiv:hep-ph/0302021
+  [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Diaz:2003as}%
+\bibitem{Bomark:2011fj}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{N.~E.}\ \bibnamefont{Bomark}}, \bibinfo
+  {author} {\bibfnamefont{D.}~\bibnamefont{Choudhury}}, \bibinfo {author}
+  {\bibfnamefont{S.}~\bibnamefont{Lola}},\ and\ \bibinfo {author}
+  {\bibfnamefont{P.}~\bibnamefont{Osland}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Supersymmetry with Trilinear R-Parity Violation
+  at the LHC}},}\ }%
+   (\bibinfo {year} {2011}),\
+  \Eprint{http://arxiv.org/abs/1110.2910}{arXiv:1110.2910 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Bomark:2011fj}%
+%%CITATION = 1110.2910;%%
+\bibitem{Nilles:1983ge}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Hans~Peter}\ \bibnamefont{Nilles}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Supersymmetry, Supergravity and Particle
+  Physics}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/0370-1573(84)90008-5}{\bibinfo {journal} {Phys. Rept.}}\ }%
+  \textbf{\bibinfo {volume} {110}},\ \bibinfo {pages} {1--162} (\bibinfo {year}
+  {1984})%
+  \bibAnnoteFile{NoStop}{Nilles:1983ge}%
+%%CITATION = PRPLC,110,1;%%
+\bibitem{Sarkar:1995dd}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Subir}\ \bibnamefont{Sarkar}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Big bang nucleosynthesis and physics beyond the
+  standard model}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/0034-4885/59/12/001}{\bibinfo {journal} {Rept. Prog. Phys.}}\ }%
+  \textbf{\bibinfo {volume} {59}},\ \bibinfo {pages} {1493--1610} (\bibinfo
+  {year} {1996}),\
+  \Eprint{http://arxiv.org/abs/hep-ph/9602260}{arXiv:hep-ph/9602260}%
+  \bibAnnoteFile{NoStop}{Sarkar:1995dd}%
+%%CITATION = HEP-PH/9602260;%%
+\bibitem{Takayama:2000uz}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Fumihiro}\ \bibnamefont{Takayama}}\ and\
+  \bibinfo {author} {\bibfnamefont{Masahiro}\ \bibnamefont{Yamaguchi}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Gravitino dark matter without R-parity}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/S0370-2693(00)00726-7}{\bibinfo {journal} {Phys.Lett.}}\ }%
+  \textbf{\bibinfo {volume} {B485}},\ \bibinfo {pages} {388--392} (\bibinfo
+  {year} {2000}),\
+  \Eprint{http://arxiv.org/abs/hep-ph/0005214}{arXiv:hep-ph/0005214 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Takayama:2000uz}%
+\bibitem{Buchmuller:2007ui}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Wilfried}\ \bibnamefont{Buchmuller}},
+  \bibinfo {author} {\bibfnamefont{Laura}\ \bibnamefont{Covi}}, \bibinfo
+  {author} {\bibfnamefont{Koichi}\ \bibnamefont{Hamaguchi}}, \bibinfo {author}
+  {\bibfnamefont{Alejandro}\ \bibnamefont{Ibarra}},\ and\ \bibinfo {author}
+  {\bibfnamefont{Tsutomu}\ \bibnamefont{Yanagida}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Gravitino dark matter in R-parity breaking
+  vacua}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1126-6708/2007/03/037}{\bibinfo {journal} {JHEP}}\ }%
+  \textbf{\bibinfo {volume} {03}},\ \bibinfo {pages} {037} (\bibinfo {year}
+  {2007}),\ \Eprint{http://arxiv.org/abs/hep-ph/0702184}{arXiv:hep-ph/0702184}%
+  \bibAnnoteFile{NoStop}{Buchmuller:2007ui}%
+%%CITATION = HEP-PH/0702184;%%
+\bibitem{Ibarra:2007wg}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Alejandro}\ \bibnamefont{Ibarra}}\ and\
+  \bibinfo {author} {\bibfnamefont{David}\ \bibnamefont{Tran}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Gamma Ray Spectrum from Gravitino Dark Matter
+  Decay}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevLett.100.061301}{\bibinfo {journal} {Phys. Rev. Lett.}}\
+  }%
+  \textbf{\bibinfo {volume} {100}},\ \bibinfo {pages} {061301} (\bibinfo {year}
+  {2008}),\ \Eprint{http://arxiv.org/abs/0709.4593}{arXiv:0709.4593
+  [astro-ph]}%
+  \bibAnnoteFile{NoStop}{Ibarra:2007wg}%
+%%CITATION = 0709.4593;%%
+\bibitem{Covi:2008jy}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Laura}\ \bibnamefont{Covi}}, \bibinfo
+  {author} {\bibfnamefont{Michael}\ \bibnamefont{Grefe}}, \bibinfo {author}
+  {\bibfnamefont{Alejandro}\ \bibnamefont{Ibarra}},\ and\ \bibinfo {author}
+  {\bibfnamefont{David}\ \bibnamefont{Tran}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Unstable Gravitino Dark Matter and Neutrino
+  Flux}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1475-7516/2009/01/029}{\bibinfo {journal} {JCAP}}\ }%
+  \textbf{\bibinfo {volume} {0901}},\ \bibinfo {pages} {029} (\bibinfo {year}
+  {2009}),\ \Eprint{http://arxiv.org/abs/0809.5030}{arXiv:0809.5030 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Covi:2008jy}%
+%%CITATION = 0809.5030;%%
+\bibitem{Yuksel:2007dr}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Hasan}\ \bibnamefont{Yuksel}}\ and\ \bibinfo
+  {author} {\bibfnamefont{Matthew~D.}\ \bibnamefont{Kistler}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Dark Matter Might Decay... Just Not Today!}}.}\
+  }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.78.023502}{\bibinfo {journal} {Phys. Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D78}},\ \bibinfo {pages} {023502} (\bibinfo {year}
+  {2008}),\ \Eprint{http://arxiv.org/abs/0711.2906}{arXiv:0711.2906
+  [astro-ph]}%
+  \bibAnnoteFile{NoStop}{Yuksel:2007dr}%
+%%CITATION = 0711.2906;%%
+\bibitem{Vertongen:2011mu}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Gilles}\ \bibnamefont{Vertongen}}\ and\
+  \bibinfo {author} {\bibfnamefont{Christoph}\ \bibnamefont{Weniger}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Hunting Dark Matter Gamma-Ray Lines with the
+  Fermi LAT}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1475-7516/2011/05/027}{\bibinfo {journal} {JCAP}}\ }%
+  \textbf{\bibinfo {volume} {1105}},\ \bibinfo {pages} {027} (\bibinfo {year}
+  {2011}),\ \Eprint{http://arxiv.org/abs/1101.2610}{arXiv:1101.2610 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Vertongen:2011mu}%
+%%CITATION = 1101.2610;%%
+\bibitem{Choi:2010jt}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Ki-Young}\ \bibnamefont{Choi}}, \bibinfo
+  {author} {\bibfnamefont{Diego}\ \bibnamefont{Restrepo}}, \bibinfo {author}
+  {\bibfnamefont{Carlos~E.}\ \bibnamefont{Yaguna}},\ and\ \bibinfo {author}
+  {\bibfnamefont{Oscar}\ \bibnamefont{Zapata}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Indirect detection of gravitino dark matter
+  including its three-body decays}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1475-7516/2010/10/033}{\bibinfo {journal} {JCAP}}\ }%
+  \textbf{\bibinfo {volume} {1010}},\ \bibinfo {pages} {033} (\bibinfo {year}
+  {2010}),\ \Eprint{http://arxiv.org/abs/1007.1728}{arXiv:1007.1728 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Choi:2010jt}%
+%%CITATION = 1007.1728;%%
+\bibitem{Garny:2010eg}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Mathias}\ \bibnamefont{Garny}}, \bibinfo
+  {author} {\bibfnamefont{Alejandro}\ \bibnamefont{Ibarra}}, \bibinfo {author}
+  {\bibfnamefont{David}\ \bibnamefont{Tran}},\ and\ \bibinfo {author}
+  {\bibfnamefont{Christoph}\ \bibnamefont{Weniger}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Gamma-Ray Lines from Radiative Dark Matter
+  Decay}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1475-7516/2011/01/032}{\bibinfo {journal} {JCAP}}\ }%
+  \textbf{\bibinfo {volume} {1101}},\ \bibinfo {pages} {032} (\bibinfo {year}
+  {2011}),\ \Eprint{http://arxiv.org/abs/1011.3786}{arXiv:1011.3786 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Garny:2010eg}%
+%%CITATION = 1011.3786;%%
+\bibitem{Hirsch:2005ag}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{M.}~\bibnamefont{Hirsch}}, \bibinfo {author}
+  {\bibfnamefont{W.}~\bibnamefont{Porod}},\ and\ \bibinfo {author}
+  {\bibfnamefont{D.}~\bibnamefont{Restrepo}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Collider signals of gravitino dark matter in
+  bilinearly broken R-parity}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1126-6708/2005/03/062}{\bibinfo {journal} {JHEP}}\ }%
+  \textbf{\bibinfo {volume} {03}},\ \bibinfo {pages} {062} (\bibinfo {year}
+  {2005}),\ \Eprint{http://arxiv.org/abs/hep-ph/0503059}{arXiv:hep-ph/0503059}%
+  \bibAnnoteFile{NoStop}{Hirsch:2005ag}%
+%%CITATION = HEP-PH/0503059;%%
+\bibitem{Hirsch:2004he}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{M.}~\bibnamefont{Hirsch}}\ and\ \bibinfo
+  {author} {\bibfnamefont{J.~W.~F.}\ \bibnamefont{Valle}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Supersymmetric origin of neutrino mass}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1367-2630/6/1/076}{\bibinfo {journal} {New J. Phys.}}\ }%
+  \textbf{\bibinfo {volume} {6}},\ \bibinfo {pages} {76} (\bibinfo {year}
+  {2004}),\ \Eprint{http://arxiv.org/abs/hep-ph/0405015}{arXiv:hep-ph/0405015}%
+  \bibAnnoteFile{NoStop}{Hirsch:2004he}%
+%%CITATION = HEP-PH/0405015;%%
+\bibitem{Hirsch:2008ur}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{M.}~\bibnamefont{Hirsch}}, \bibinfo {author}
+  {\bibfnamefont{A.}~\bibnamefont{Vicente}},\ and\ \bibinfo {author}
+  {\bibfnamefont{W.}~\bibnamefont{Porod}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Spontaneous R-parity violation: Lightest
+  neutralino decays and neutrino mixing angles at future colliders}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.77.075005}{\bibinfo {journal} {Phys. Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D77}},\ \bibinfo {pages} {075005} (\bibinfo {year}
+  {2008}),\ \Eprint{http://arxiv.org/abs/0802.2896}{arXiv:0802.2896 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Hirsch:2008ur}%
+%%CITATION = 0802.2896;%%
+\bibitem{Sierra:2008wj}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{D.}~\bibnamefont{Aristizabal~Sierra}},
+  \bibinfo {author} {\bibfnamefont{Jisuke}\ \bibnamefont{Kubo}}, \bibinfo
+  {author} {\bibfnamefont{D.}~\bibnamefont{Restrepo}}, \bibinfo {author}
+  {\bibfnamefont{Daijiro}\ \bibnamefont{Suematsu}},\ and\ \bibinfo {author}
+  {\bibfnamefont{Oscar}\ \bibnamefont{Zapata}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Radiative seesaw: Warm dark matter, collider and
+  lepton flavour violating signals}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.79.013011}{\bibinfo {journal} {Phys. Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D79}},\ \bibinfo {pages} {013011} (\bibinfo {year}
+  {2009}),\ \Eprint{http://arxiv.org/abs/0808.3340}{arXiv:0808.3340 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Sierra:2008wj}%
+%%CITATION = 0808.3340;%%
+\bibitem{AristizabalSierra:2006ri}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{D.}~\bibnamefont{Aristizabal~Sierra}}\ and\
+  \bibinfo {author} {\bibfnamefont{Diego}\ \bibnamefont{Restrepo}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Leptonic Charged Higgs Decays in the Zee
+  Model}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1126-6708/2006/08/036}{\bibinfo {journal} {JHEP}}\ }%
+  \textbf{\bibinfo {volume} {0608}},\ \bibinfo {pages} {036} (\bibinfo {year}
+  {2006}),\ \Eprint{http://arxiv.org/abs/hep-ph/0604012}{arXiv:hep-ph/0604012
+  [hep-ph]}%
+  \bibAnnoteFile{NoStop}{AristizabalSierra:2006ri}%
+\bibitem{Belanger:2006is}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{G.}~\bibnamefont{Belanger}}, \bibinfo
+  {author} {\bibfnamefont{F.}~\bibnamefont{Boudjema}}, \bibinfo {author}
+  {\bibfnamefont{A.}~\bibnamefont{Pukhov}},\ and\ \bibinfo {author}
+  {\bibfnamefont{A.}~\bibnamefont{Semenov}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{micrOMEGAs2.0: A program to calculate the relic
+  density of dark matter in a generic model}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/j.cpc.2006.11.008}{\bibinfo {journal} {Comput. Phys. Commun.}}\
+  }%
+  \textbf{\bibinfo {volume} {176}},\ \bibinfo {pages} {367--382} (\bibinfo
+  {year} {2007}),\
+  \Eprint{http://arxiv.org/abs/hep-ph/0607059}{arXiv:hep-ph/0607059}%
+  \bibAnnoteFile{NoStop}{Belanger:2006is}%
+%%CITATION = HEP-PH/0607059;%%
+\bibitem{McDonald:1993ex}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{John}\ \bibnamefont{McDonald}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Gauge Singlet Scalars as Cold Dark Matter}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.50.3637}{\bibinfo {journal} {Phys. Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D50}},\ \bibinfo {pages} {3637--3649} (\bibinfo
+  {year} {1994}),\
+  \Eprint{http://arxiv.org/abs/hep-ph/0702143}{arXiv:hep-ph/0702143}%
+  \bibAnnoteFile{NoStop}{McDonald:1993ex}%
+%%CITATION = HEP-PH/0702143;%%
+\bibitem{Burgess:2000yq}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{C.~P.}\ \bibnamefont{Burgess}}, \bibinfo
+  {author} {\bibfnamefont{Maxim}\ \bibnamefont{Pospelov}},\ and\ \bibinfo
+  {author} {\bibfnamefont{Tonnis}\ \bibnamefont{ter Veldhuis}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{The minimal model of nonbaryonic dark matter: A
+  singlet scalar}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/S0550-3213(01)00513-2}{\bibinfo {journal} {Nucl. Phys.}}\ }%
+  \textbf{\bibinfo {volume} {B619}},\ \bibinfo {pages} {709--728} (\bibinfo
+  {year} {2001}),\
+  \Eprint{http://arxiv.org/abs/hep-ph/0011335}{arXiv:hep-ph/0011335}%
+  \bibAnnoteFile{NoStop}{Burgess:2000yq}%
+%%CITATION = HEP-PH/0011335;%%
+\bibitem{Davoudiasl:2004be}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Hooman}\ \bibnamefont{Davoudiasl}}, \bibinfo
+  {author} {\bibfnamefont{Ryuichiro}\ \bibnamefont{Kitano}}, \bibinfo {author}
+  {\bibfnamefont{Tianjun}\ \bibnamefont{Li}},\ and\ \bibinfo {author}
+  {\bibfnamefont{Hitoshi}\ \bibnamefont{Murayama}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{The new minimal standard model}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/j.physletb.2005.01.026}{\bibinfo {journal} {Phys. Lett.}}\ }%
+  \textbf{\bibinfo {volume} {B609}},\ \bibinfo {pages} {117--123} (\bibinfo
+  {year} {2005}),\
+  \Eprint{http://arxiv.org/abs/hep-ph/0405097}{arXiv:hep-ph/0405097}%
+  \bibAnnoteFile{NoStop}{Davoudiasl:2004be}%
+%%CITATION = HEP-PH/0405097;%%
+\bibitem{Barger:2007im}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Vernon}\ \bibnamefont{Barger}}, \bibinfo
+  {author} {\bibfnamefont{Paul}\ \bibnamefont{Langacker}}, \bibinfo {author}
+  {\bibfnamefont{Mathew}\ \bibnamefont{McCaskey}}, \bibinfo {author}
+  {\bibfnamefont{Michael~J.}\ \bibnamefont{Ramsey-Musolf}},\ and\ \bibinfo
+  {author} {\bibfnamefont{Gabe}\ \bibnamefont{Shaughnessy}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{LHC Phenomenology of an Extended Standard Model
+  with a Real Scalar Singlet}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.77.035005}{\bibinfo {journal} {Phys. Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D77}},\ \bibinfo {pages} {035005} (\bibinfo {year}
+  {2008}),\ \Eprint{http://arxiv.org/abs/0706.4311}{arXiv:0706.4311 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Barger:2007im}%
+%%CITATION = 0706.4311;%%
+\bibitem{Dick:2008ah}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Rainer}\ \bibnamefont{Dick}}, \bibinfo
+  {author} {\bibfnamefont{Robert~B.}\ \bibnamefont{Mann}},\ and\ \bibinfo
+  {author} {\bibfnamefont{Kai~E.}\ \bibnamefont{Wunderle}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Cosmic rays through the Higgs portal}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/j.nuclphysb.2008.07.016}{\bibinfo {journal} {Nucl. Phys.}}\ }%
+  \textbf{\bibinfo {volume} {B805}},\ \bibinfo {pages} {207--230} (\bibinfo
+  {year} {2008}),\ \Eprint{http://arxiv.org/abs/0803.1444}{arXiv:0803.1444
+  [astro-ph]}%
+  \bibAnnoteFile{NoStop}{Dick:2008ah}%
+%%CITATION = 0803.1444;%%
+\bibitem{Yaguna:2008hd}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Carlos~E.}\ \bibnamefont{Yaguna}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Gamma rays from the annihilation of singlet
+  scalar dark matter}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1475-7516/2009/03/003}{\bibinfo {journal} {JCAP}}\ }%
+  \textbf{\bibinfo {volume} {0903}},\ \bibinfo {pages} {003} (\bibinfo {year}
+  {2009}),\ \Eprint{http://arxiv.org/abs/0810.4267}{arXiv:0810.4267 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Yaguna:2008hd}%
+%%CITATION = 0810.4267;%%
+\bibitem{Goudelis:2009zz}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{A.}~\bibnamefont{Goudelis}}, \bibinfo
+  {author} {\bibfnamefont{Y.}~\bibnamefont{Mambrini}},\ and\ \bibinfo {author}
+  {\bibfnamefont{C.}~\bibnamefont{Yaguna}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Antimatter signals of singlet scalar dark
+  matter}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1475-7516/2009/12/008}{\bibinfo {journal} {JCAP}}\ }%
+  \textbf{\bibinfo {volume} {0912}},\ \bibinfo {pages} {008} (\bibinfo {year}
+  {2009}),\ \Eprint{http://arxiv.org/abs/0909.2799}{arXiv:0909.2799 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Goudelis:2009zz}%
+%%CITATION = 0909.2799;%%
+\bibitem{Yaguna:2011qn}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Carlos~E.}\ \bibnamefont{Yaguna}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{The singlet scalar as FIMP dark matter}},}\ }%
+  \bibfield{journal}{%
+  \bibinfo {journal} {JHEP}\ }%
+  \textbf{\bibinfo {volume} {08}},\ \bibinfo {pages} {060} (\bibinfo {year}
+  {2011}),\ \Eprint{http://arxiv.org/abs/1105.1654}{arXiv:1105.1654 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Yaguna:2011qn}%
+%%CITATION = 1105.1654;%%
+\bibitem{Barbieri:2006dq}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Riccardo}\ \bibnamefont{Barbieri}}, \bibinfo
+  {author} {\bibfnamefont{Lawrence~J.}\ \bibnamefont{Hall}},\ and\ \bibinfo
+  {author} {\bibfnamefont{Vyacheslav~S.}\ \bibnamefont{Rychkov}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Improved naturalness with a heavy Higgs: An
+  alternative road to LHC physics}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.74.015007}{\bibinfo {journal} {Phys. Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D74}},\ \bibinfo {pages} {015007} (\bibinfo {year}
+  {2006}),\ \Eprint{http://arxiv.org/abs/hep-ph/0603188}{arXiv:hep-ph/0603188}%
+  \bibAnnoteFile{NoStop}{Barbieri:2006dq}%
+%%CITATION = HEP-PH/0603188;%%
+\bibitem{Majumdar:2006nt}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Debasish}\ \bibnamefont{Majumdar}}\ and\
+  \bibinfo {author} {\bibfnamefont{Ambar}\ \bibnamefont{Ghosal}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Dark Matter candidate in a Heavy Higgs Model -
+  Direct Detection Rates}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1142/S0217732308025954}{\bibinfo {journal} {Mod. Phys. Lett.}}\ }%
+  \textbf{\bibinfo {volume} {A23}},\ \bibinfo {pages} {2011--2022} (\bibinfo
+  {year} {2008}),\
+  \Eprint{http://arxiv.org/abs/hep-ph/0607067}{arXiv:hep-ph/0607067}%
+  \bibAnnoteFile{NoStop}{Majumdar:2006nt}%
+%%CITATION = HEP-PH/0607067;%%
+\bibitem{Hambye:2007vf}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Thomas}\ \bibnamefont{Hambye}}\ and\
+  \bibinfo {author} {\bibfnamefont{Michel H.~G.}\ \bibnamefont{Tytgat}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Electroweak Symmetry Breaking induced by Dark
+  Matter}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/j.physletb.2007.11.069}{\bibinfo {journal} {Phys. Lett.}}\ }%
+  \textbf{\bibinfo {volume} {B659}},\ \bibinfo {pages} {651--655} (\bibinfo
+  {year} {2008}),\ \Eprint{http://arxiv.org/abs/0707.0633}{arXiv:0707.0633
+  [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Hambye:2007vf}%
+%%CITATION = 0707.0633;%%
+\bibitem{LopezHonorez:2006gr}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Laura}\ \bibnamefont{Lopez~Honorez}},
+  \bibinfo {author} {\bibfnamefont{Emmanuel}\ \bibnamefont{Nezri}}, \bibinfo
+  {author} {\bibfnamefont{Josep~F.}\ \bibnamefont{Oliver}},\ and\ \bibinfo
+  {author} {\bibfnamefont{Michel H.~G.}\ \bibnamefont{Tytgat}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{The inert doublet model: An archetype for dark
+  matter}},}\ }%
+  \bibfield{journal}{%
+  \bibinfo {journal} {JCAP}\ }%
+  \textbf{\bibinfo {volume} {0702}},\ \bibinfo {pages} {028} (\bibinfo {year}
+  {2007}),\ \Eprint{http://arxiv.org/abs/hep-ph/0612275}{arXiv:hep-ph/0612275}%
+  \bibAnnoteFile{NoStop}{LopezHonorez:2006gr}%
+%%CITATION = HEP-PH/0612275;%%
+\bibitem{Gustafsson:2007pc}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Michael}\ \bibnamefont{Gustafsson}},
+  \bibinfo {author} {\bibfnamefont{Erik}\ \bibnamefont{Lundstrom}}, \bibinfo
+  {author} {\bibfnamefont{Lars}\ \bibnamefont{Bergstrom}},\ and\ \bibinfo
+  {author} {\bibfnamefont{Joakim}\ \bibnamefont{Edsjo}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Significant gamma lines from inert Higgs dark
+  matter}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevLett.99.041301}{\bibinfo {journal} {Phys. Rev. Lett.}}\
+  }%
+  \textbf{\bibinfo {volume} {99}},\ \bibinfo {pages} {041301} (\bibinfo {year}
+  {2007}),\
+  \Eprint{http://arxiv.org/abs/astro-ph/0703512}{arXiv:astro-ph/0703512}%
+  \bibAnnoteFile{NoStop}{Gustafsson:2007pc}%
+%%CITATION = ASTRO-PH/0703512;%%
+\bibitem{Agrawal:2008xz}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Prateek}\ \bibnamefont{Agrawal}}, \bibinfo
+  {author} {\bibfnamefont{Ethan~M.}\ \bibnamefont{Dolle}},\ and\ \bibinfo
+  {author} {\bibfnamefont{Christopher~A.}\ \bibnamefont{Krenke}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Signals of Inert Doublet Dark Matter in Neutrino
+  Telescopes}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.79.015015}{\bibinfo {journal} {Phys. Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D79}},\ \bibinfo {pages} {015015} (\bibinfo {year}
+  {2009}),\ \Eprint{http://arxiv.org/abs/0811.1798}{arXiv:0811.1798 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Agrawal:2008xz}%
+%%CITATION = 0811.1798;%%
+\bibitem{Andreas:2009hj}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Sarah}\ \bibnamefont{Andreas}}, \bibinfo
+  {author} {\bibfnamefont{Michel H.~G.}\ \bibnamefont{Tytgat}},\ and\ \bibinfo
+  {author} {\bibfnamefont{Quentin}\ \bibnamefont{Swillens}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Neutrinos from Inert Doublet Dark Matter}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1475-7516/2009/04/004}{\bibinfo {journal} {JCAP}}\ }%
+  \textbf{\bibinfo {volume} {0904}},\ \bibinfo {pages} {004} (\bibinfo {year}
+  {2009}),\ \Eprint{http://arxiv.org/abs/0901.1750}{arXiv:0901.1750 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Andreas:2009hj}%
+%%CITATION = 0901.1750;%%
+\bibitem{Nezri:2009jd}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Emmanuel}\ \bibnamefont{Nezri}}, \bibinfo
+  {author} {\bibfnamefont{Michel H.~G.}\ \bibnamefont{Tytgat}},\ and\ \bibinfo
+  {author} {\bibfnamefont{Gilles}\ \bibnamefont{Vertongen}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Positrons and antiprotons from inert doublet
+  model dark matter}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1475-7516/2009/04/014}{\bibinfo {journal} {JCAP}}\ }%
+  \textbf{\bibinfo {volume} {0904}},\ \bibinfo {pages} {014} (\bibinfo {year}
+  {2009}),\ \Eprint{http://arxiv.org/abs/0901.2556}{arXiv:0901.2556 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Nezri:2009jd}%
+%%CITATION = 0901.2556;%%
+\bibitem{Lundstrom:2008ai}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Erik}\ \bibnamefont{Lundstrom}}, \bibinfo
+  {author} {\bibfnamefont{Michael}\ \bibnamefont{Gustafsson}},\ and\ \bibinfo
+  {author} {\bibfnamefont{Joakim}\ \bibnamefont{Edsjo}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{The Inert Doublet Model and LEP II Limits}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.79.035013}{\bibinfo {journal} {Phys. Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D79}},\ \bibinfo {pages} {035013} (\bibinfo {year}
+  {2009}),\ \Eprint{http://arxiv.org/abs/0810.3924}{arXiv:0810.3924 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Lundstrom:2008ai}%
+%%CITATION = 0810.3924;%%
+\bibitem{Dolle:2009ft}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Ethan}\ \bibnamefont{Dolle}}, \bibinfo
+  {author} {\bibfnamefont{Xinyu}\ \bibnamefont{Miao}}, \bibinfo {author}
+  {\bibfnamefont{Shufang}\ \bibnamefont{Su}},\ and\ \bibinfo {author}
+  {\bibfnamefont{Brooks}\ \bibnamefont{Thomas}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Dilepton Signals in the Inert Doublet Model}},}\
+  }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.81.035003}{\bibinfo {journal} {Phys. Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D81}},\ \bibinfo {pages} {035003} (\bibinfo {year}
+  {2010}),\ \Eprint{http://arxiv.org/abs/0909.3094}{arXiv:0909.3094 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Dolle:2009ft}%
+%%CITATION = 0909.3094;%%
+\bibitem{Ma:2006km}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Ernest}\ \bibnamefont{Ma}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Verifiable radiative seesaw mechanism of neutrino
+  mass and dark matter}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.73.077301}{\bibinfo {journal} {Phys. Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D73}},\ \bibinfo {pages} {077301} (\bibinfo {year}
+  {2006}),\ \Eprint{http://arxiv.org/abs/hep-ph/0601225}{arXiv:hep-ph/0601225}%
+  \bibAnnoteFile{NoStop}{Ma:2006km}%
+%%CITATION = HEP-PH/0601225;%%
+\bibitem{Kubo:2006yx}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Jisuke}\ \bibnamefont{Kubo}}, \bibinfo
+  {author} {\bibfnamefont{Ernest}\ \bibnamefont{Ma}},\ and\ \bibinfo {author}
+  {\bibfnamefont{Daijiro}\ \bibnamefont{Suematsu}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Cold dark matter, radiative neutrino mass, mu -->
+  e gamma, and neutrinoless double beta decay}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/j.physletb.2006.08.085}{\bibinfo {journal} {Phys. Lett.}}\ }%
+  \textbf{\bibinfo {volume} {B642}},\ \bibinfo {pages} {18--23} (\bibinfo
+  {year} {2006}),\
+  \Eprint{http://arxiv.org/abs/hep-ph/0604114}{arXiv:hep-ph/0604114}%
+  \bibAnnoteFile{NoStop}{Kubo:2006yx}%
+%%CITATION = HEP-PH/0604114;%%
+\bibitem{Kubo:2006rm}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Jisuke}\ \bibnamefont{Kubo}}\ and\ \bibinfo
+  {author} {\bibfnamefont{Daijiro}\ \bibnamefont{Suematsu}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Neutrino masses and CDM in a non-supersymmetric
+  model}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/j.physletb.2006.11.005}{\bibinfo {journal} {Phys. Lett.}}\ }%
+  \textbf{\bibinfo {volume} {B643}},\ \bibinfo {pages} {336--341} (\bibinfo
+  {year} {2006}),\
+  \Eprint{http://arxiv.org/abs/hep-ph/0610006}{arXiv:hep-ph/0610006}%
+  \bibAnnoteFile{NoStop}{Kubo:2006rm}%
+%%CITATION = HEP-PH/0610006;%%
+\bibitem{Suematsu:2009ww}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Daijiro}\ \bibnamefont{Suematsu}}, \bibinfo
+  {author} {\bibfnamefont{Takashi}\ \bibnamefont{Toma}},\ and\ \bibinfo
+  {author} {\bibfnamefont{Tetsuro}\ \bibnamefont{Yoshida}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Reconciliation of CDM abundance and $\mu\to
+  e\gamma$ in a radiative seesaw model}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.79.093004}{\bibinfo {journal} {Phys. Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D79}},\ \bibinfo {pages} {093004} (\bibinfo {year}
+  {2009}),\ \Eprint{http://arxiv.org/abs/0903.0287}{arXiv:0903.0287 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Suematsu:2009ww}%
+%%CITATION = 0903.0287;%%
+\bibitem{Gelmini:2009xd}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Graciela~B.}\ \bibnamefont{Gelmini}},
+  \bibinfo {author} {\bibfnamefont{Efunwande}\ \bibnamefont{Osoba}},\ and\
+  \bibinfo {author} {\bibfnamefont{Sergio}\ \bibnamefont{Palomares-Ruiz}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Inert-Sterile Neutrino: Cold or Warm Dark Matter
+  Candidate}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.81.063529}{\bibinfo {journal} {Phys. Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D81}},\ \bibinfo {pages} {063529} (\bibinfo {year}
+  {2010}),\ \Eprint{http://arxiv.org/abs/0912.2478}{arXiv:0912.2478 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Gelmini:2009xd}%
+%%CITATION = 0912.2478;%%
+\bibitem{Sierra:2009zq}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{D.}~\bibnamefont{Aristizabal~Sierra}},
+  \bibinfo {author} {\bibfnamefont{Diego}\ \bibnamefont{Restrepo}},\ and\
+  \bibinfo {author} {\bibfnamefont{Oscar}\ \bibnamefont{Zapata}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Decaying neutralino dark matter in anomalous
+  $U(1)_H$ models}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.80.055010}{\bibinfo {journal} {Phys. Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D80}},\ \bibinfo {pages} {055010} (\bibinfo {year}
+  {2009}),\ \Eprint{http://arxiv.org/abs/0907.0682}{arXiv:0907.0682 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Sierra:2009zq}%
+%%CITATION = 0907.0682;%%
+\bibitem{AristizabalSierra:2008ye}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{D.}~\bibnamefont{Aristizabal~Sierra}},
+  \bibinfo {author} {\bibfnamefont{W.}~\bibnamefont{Porod}}, \bibinfo {author}
+  {\bibfnamefont{D.}~\bibnamefont{Restrepo}},\ and\ \bibinfo {author}
+  {\bibfnamefont{Carlos~E.}\ \bibnamefont{Yaguna}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Novel Higgs decay signals in R-parity violating
+  models}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.78.015015}{\bibinfo {journal} {Phys.Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D78}},\ \bibinfo {pages} {015015} (\bibinfo {year}
+  {2008}),\ \Eprint{http://arxiv.org/abs/0804.1907}{arXiv:0804.1907 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{AristizabalSierra:2008ye}%
+\bibitem{AristizabalSierra:2009bh}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{D.}~\bibnamefont{Aristizabal~Sierra}},
+  \bibinfo {author} {\bibfnamefont{Luis~Alfredo}\ \bibnamefont{Munoz}},\ and\
+  \bibinfo {author} {\bibfnamefont{Enrico}\ \bibnamefont{Nardi}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Purely Flavored Leptogenesis}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.80.016007}{\bibinfo {journal} {Phys.Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D80}},\ \bibinfo {pages} {016007} (\bibinfo {year}
+  {2009}),\ \Eprint{http://arxiv.org/abs/0904.3043}{arXiv:0904.3043 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{AristizabalSierra:2009bh}%
+\bibitem{Magro:2003zb}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{M.B.}\ \bibnamefont{Magro}}, \bibinfo
+  {author} {\bibfnamefont{F.}~\bibnamefont{de~Campos}}, \bibinfo {author}
+  {\bibfnamefont{O.J.P.}\ \bibnamefont{Eboli}}, \bibinfo {author}
+  {\bibfnamefont{W.}~\bibnamefont{Porod}}, \bibinfo {author}
+  {\bibfnamefont{D.}~\bibnamefont{Restrepo}}, \emph{et~al.},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Probing neutrino mass with multilepton production
+  at the Tevatron in the simplest R parity violation model}},}\ }%
+  \bibfield{journal}{%
+  \bibinfo {journal} {JHEP}\ }%
+  \textbf{\bibinfo {volume} {0309}},\ \bibinfo {pages} {071} (\bibinfo {year}
+  {2003}),\ \Eprint{http://arxiv.org/abs/hep-ph/0304232}{arXiv:hep-ph/0304232
+  [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Magro:2003zb}%
+\bibitem{deCampos:2005ri}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{F.}~\bibnamefont{de~Campos}}, \bibinfo
+  {author} {\bibfnamefont{O.J.P.}\ \bibnamefont{Eboli}}, \bibinfo {author}
+  {\bibfnamefont{M.B.}\ \bibnamefont{Magro}}, \bibinfo {author}
+  {\bibfnamefont{W.}~\bibnamefont{Porod}}, \bibinfo {author}
+  {\bibfnamefont{D.}~\bibnamefont{Restrepo}}, \emph{et~al.},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Probing neutrino mass with displaced vertices at
+  the Tevatron}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.71.075001}{\bibinfo {journal} {Phys.Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D71}},\ \bibinfo {pages} {075001} (\bibinfo {year}
+  {2005}),\ \Eprint{http://arxiv.org/abs/hep-ph/0501153}{arXiv:hep-ph/0501153
+  [hep-ph]}%
+  \bibAnnoteFile{NoStop}{deCampos:2005ri}%
+\bibitem{deCampos:2007bn}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{F.}~\bibnamefont{de~Campos}}, \bibinfo
+  {author} {\bibfnamefont{O.J.P.}\ \bibnamefont{Eboli}}, \bibinfo {author}
+  {\bibfnamefont{M.B.}\ \bibnamefont{Magro}}, \bibinfo {author}
+  {\bibfnamefont{W.}~\bibnamefont{Porod}}, \bibinfo {author}
+  {\bibfnamefont{D.}~\bibnamefont{Restrepo}}, \emph{et~al.},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Probing bilinear R-parity violating supergravity
+  at the LHC}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1126-6708/2008/05/048}{\bibinfo {journal} {JHEP}}\ }%
+  \textbf{\bibinfo {volume} {0805}},\ \bibinfo {pages} {048} (\bibinfo {year}
+  {2008}),\ \Eprint{http://arxiv.org/abs/0712.2156}{arXiv:0712.2156 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{deCampos:2007bn}%
+\bibitem{deCampos:2008ic}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{F.}~\bibnamefont{de~Campos}}, \bibinfo
+  {author} {\bibfnamefont{O.J.P.}\ \bibnamefont{Eboli}}, \bibinfo {author}
+  {\bibfnamefont{M.B.}\ \bibnamefont{Magro}}, \bibinfo {author}
+  {\bibfnamefont{D.}~\bibnamefont{Restrepo}},\ and\ \bibinfo {author}
+  {\bibfnamefont{J.W.F.}\ \bibnamefont{Valle}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Finding the Higgs Boson through
+  Supersymmetry}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.80.015002}{\bibinfo {journal} {Phys.Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D80}},\ \bibinfo {pages} {015002} (\bibinfo {year}
+  {2009}),\ \Eprint{http://arxiv.org/abs/0809.1637}{arXiv:0809.1637 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{deCampos:2008ic}%
+\bibitem{deCampos:2008re}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{F.}~\bibnamefont{de~Campos}}, \bibinfo
+  {author} {\bibfnamefont{O.J.P.}\ \bibnamefont{Eboli}}, \bibinfo {author}
+  {\bibfnamefont{M.B.}\ \bibnamefont{Magro}},\ and\ \bibinfo {author}
+  {\bibfnamefont{D.}~\bibnamefont{Restrepo}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Searching supersymmetry at the LHCb with
+  displaced vertices}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.79.055008}{\bibinfo {journal} {Phys.Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D79}},\ \bibinfo {pages} {055008} (\bibinfo {year}
+  {2009}),\ \Eprint{http://arxiv.org/abs/0809.0007}{arXiv:0809.0007 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{deCampos:2008re}%
+\bibitem{DeCampos:2010yu}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{F.}~\bibnamefont{De~Campos}}, \bibinfo
+  {author} {\bibfnamefont{O.J.P.}\ \bibnamefont{Eboli}}, \bibinfo {author}
+  {\bibfnamefont{M.}~\bibnamefont{Hirsch}}, \bibinfo {author}
+  {\bibfnamefont{M.B.}\ \bibnamefont{Magro}}, \bibinfo {author}
+  {\bibfnamefont{W.}~\bibnamefont{Porod}}, \emph{et~al.},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Probing Neutrino Oscillations in Supersymmetric
+  Models at the Large Hadron Collider}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.82.075002}{\bibinfo {journal} {Phys.Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D82}},\ \bibinfo {pages} {075002} (\bibinfo {year}
+  {2010}),\ \Eprint{http://arxiv.org/abs/1006.5075}{arXiv:1006.5075 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{DeCampos:2010yu}%
+\bibitem{:2011iu}%
+  \BibitemOpen
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Search for supersymmetry in final states with
+  jets, missing transverse momentum and one isolated lepton in sqrt{s} = 7 TeV
+  pp collisions using 1 fb-1 of ATLAS data}},}\ }%
+   (\bibinfo {year} {2011}),\
+  \Eprint{http://arxiv.org/abs/1109.6606}{arXiv:1109.6606 [hep-ex]}%
+  \bibAnnoteFile{NoStop}{:2011iu}%
+%%CITATION = 1109.6606;%%
+\bibitem{Ishiwata:2008cu}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Koji}\ \bibnamefont{Ishiwata}}, \bibinfo
+  {author} {\bibfnamefont{Shigeki}\ \bibnamefont{Matsumoto}},\ and\ \bibinfo
+  {author} {\bibfnamefont{Takeo}\ \bibnamefont{Moroi}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{High Energy Cosmic Rays from the Decay of
+  Gravitino Dark Matter}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.78.063505}{\bibinfo {journal} {Phys. Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D78}},\ \bibinfo {pages} {063505} (\bibinfo {year}
+  {2008}),\ \Eprint{http://arxiv.org/abs/0805.1133}{arXiv:0805.1133 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Ishiwata:2008cu}%
+%%CITATION = 0805.1133;%%
+\bibitem{Restrepo:2011rj}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Diego}\ \bibnamefont{Restrepo}}, \bibinfo
+  {author} {\bibfnamefont{Marco}\ \bibnamefont{Taoso}}, \bibinfo {author}
+  {\bibfnamefont{J.W.F.}\ \bibnamefont{Valle}},\ and\ \bibinfo {author}
+  {\bibfnamefont{Oscar}\ \bibnamefont{Zapata}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Gravitino dark matter and neutrino masses with
+  bilinear R-parity violation}},}\ }%
+   (\bibinfo {year} {2011}),\ \bibinfo {note} {* Temporary entry *},\
+  \Eprint{http://arxiv.org/abs/1109.0512}{arXiv:1109.0512 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Restrepo:2011rj}%
+\bibitem{Lola:2007rw}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{S.}~\bibnamefont{Lola}}, \bibinfo {author}
+  {\bibfnamefont{P.}~\bibnamefont{Osland}},\ and\ \bibinfo {author}
+  {\bibfnamefont{A.R.}\ \bibnamefont{Raklev}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Radiative gravitino decays from R-parity
+  violation}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/j.physletb.2007.09.048}{\bibinfo {journal} {Phys.Lett.}}\ }%
+  \textbf{\bibinfo {volume} {B656}},\ \bibinfo {pages} {83--90} (\bibinfo
+  {year} {2007}),\ \Eprint{http://arxiv.org/abs/0707.2510}{arXiv:0707.2510
+  [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Lola:2007rw}%
+\bibitem{Lola:2008bk}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{N.-E.}\ \bibnamefont{Bomark}}, \bibinfo
+  {author} {\bibfnamefont{S.}~\bibnamefont{Lola}}, \bibinfo {author}
+  {\bibfnamefont{P.}~\bibnamefont{Osland}},\ and\ \bibinfo {author}
+  {\bibfnamefont{A.R.}\ \bibnamefont{Raklev}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Gravitino Dark Matter and the Flavour Structure
+  of R-violating Operators}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/j.physletb.2009.05.011}{\bibinfo {journal} {Phys.Lett.}}\ }%
+  \textbf{\bibinfo {volume} {B677}},\ \bibinfo {pages} {62--70} (\bibinfo
+  {year} {2009}),\ \Eprint{http://arxiv.org/abs/0811.2969}{arXiv:0811.2969
+  [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Lola:2008bk}%
+\bibitem{Bomark:2009zm}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{N.-E.}\ \bibnamefont{Bomark}}, \bibinfo
+  {author} {\bibfnamefont{S.}~\bibnamefont{Lola}}, \bibinfo {author}
+  {\bibfnamefont{P.}~\bibnamefont{Osland}},\ and\ \bibinfo {author}
+  {\bibfnamefont{A.R.}\ \bibnamefont{Raklev}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Photon, Neutrino and Charged Particle Spectra
+  from R-violating Gravitino Decays}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/j.physletb.2010.02.050}{\bibinfo {journal} {Phys.Lett.}}\ }%
+  \textbf{\bibinfo {volume} {B686}},\ \bibinfo {pages} {152--161} (\bibinfo
+  {year} {2010}),\ \Eprint{http://arxiv.org/abs/0911.3376}{arXiv:0911.3376
+  [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Bomark:2009zm}%
+\bibitem{Bajc:2010qj}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Borut}\ \bibnamefont{Bajc}}, \bibinfo
+  {author} {\bibfnamefont{Tsedenbaljir}\ \bibnamefont{Enkhbat}}, \bibinfo
+  {author} {\bibfnamefont{Dilip~Kumar}\ \bibnamefont{Ghosh}}, \bibinfo {author}
+  {\bibfnamefont{Goran}\ \bibnamefont{Senjanovic}},\ and\ \bibinfo {author}
+  {\bibfnamefont{Yue}\ \bibnamefont{Zhang}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{MSSM in view of PAMELA and Fermi-LAT}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1007/JHEP05(2010)048}{\bibinfo {journal} {JHEP}}\ }%
+  \textbf{\bibinfo {volume} {1005}},\ \bibinfo {pages} {048} (\bibinfo {year}
+  {2010}),\ \Eprint{http://arxiv.org/abs/1002.3631}{arXiv:1002.3631 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Bajc:2010qj}%
+\bibitem{Nardi:2008ix}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Enrico}\ \bibnamefont{Nardi}}, \bibinfo
+  {author} {\bibfnamefont{Francesco}\ \bibnamefont{Sannino}},\ and\ \bibinfo
+  {author} {\bibfnamefont{Alessandro}\ \bibnamefont{Strumia}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Decaying Dark Matter can explain the
+  electron/positron excesses}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1475-7516/2009/01/043}{\bibinfo {journal} {JCAP}}\ }%
+  \textbf{\bibinfo {volume} {0901}},\ \bibinfo {pages} {043} (\bibinfo {year}
+  {2009}),\ \Eprint{http://arxiv.org/abs/0811.4153}{arXiv:0811.4153 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Nardi:2008ix}%
+%%CITATION = 0811.4153;%%
+\bibitem{Choi:2010xn}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Ki-Young}\ \bibnamefont{Choi}}\ and\
+  \bibinfo {author} {\bibfnamefont{Carlos~E.}\ \bibnamefont{Yaguna}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{New decay modes of gravitino dark matter}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevD.82.015008}{\bibinfo {journal} {Phys.Rev.}}\ }%
+  \textbf{\bibinfo {volume} {D82}},\ \bibinfo {pages} {015008} (\bibinfo {year}
+  {2010}),\ \Eprint{http://arxiv.org/abs/1003.3401}{arXiv:1003.3401 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Choi:2010xn}%
+\bibitem{Allanach:2008qq}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{B.C.}\ \bibnamefont{Allanach}}, \bibinfo
+  {author} {\bibfnamefont{C.}~\bibnamefont{Balazs}}, \bibinfo {author}
+  {\bibfnamefont{G.}~\bibnamefont{Belanger}}, \bibinfo {author}
+  {\bibfnamefont{M.}~\bibnamefont{Bernhardt}}, \bibinfo {author}
+  {\bibfnamefont{F.}~\bibnamefont{Boudjema}}, \emph{et~al.},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{SUSY Les Houches Accord 2}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/j.cpc.2008.08.004}{\bibinfo {journal} {Comput.Phys.Commun.}}\ }%
+  \textbf{\bibinfo {volume} {180}},\ \bibinfo {pages} {8--25} (\bibinfo {year}
+  {2009}),\ \Eprint{http://arxiv.org/abs/0801.0045}{arXiv:0801.0045 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Allanach:2008qq}%
+\bibitem{Sjostrand:2006za}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Torbjorn}\ \bibnamefont{Sjostrand}},
+  \bibinfo {author} {\bibfnamefont{Stephen}\ \bibnamefont{Mrenna}},\ and\
+  \bibinfo {author} {\bibfnamefont{Peter~Z.}\ \bibnamefont{Skands}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{PYTHIA 6.4 Physics and Manual}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1126-6708/2006/05/026}{\bibinfo {journal} {JHEP}}\ }%
+  \textbf{\bibinfo {volume} {0605}},\ \bibinfo {pages} {026} (\bibinfo {year}
+  {2006}),\ \Eprint{http://arxiv.org/abs/hep-ph/0603175}{arXiv:hep-ph/0603175
+  [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Sjostrand:2006za}%
+\bibitem{Porod:2003um}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Werner}\ \bibnamefont{Porod}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{SPheno, a program for calculating supersymmetric
+  spectra, SUSY particle decays and SUSY particle production at e+ e-
+  colliders}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/S0010-4655(03)00222-4}{\bibinfo {journal}
+  {Comput.Phys.Commun.}}\ }%
+  \textbf{\bibinfo {volume} {153}},\ \bibinfo {pages} {275--315} (\bibinfo
+  {year} {2003}),\
+  \Eprint{http://arxiv.org/abs/hep-ph/0301101}{arXiv:hep-ph/0301101 [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Porod:2003um}%
+\bibitem{Brigliadori:2008vf}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{T.}~\bibnamefont{Aaltonen}} \emph{et~al.}
+  (\bibinfo {collaboration} {CDF Collaboration}),\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Search for Pair Production of Scalar Top Quarks
+  Decaying to a $\tau$ Lepton and a $b$ Quark in $p\bar{p}$ Collisions at
+  sqrt{s}=1.96 TeV}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1103/PhysRevLett.101.071802}{\bibinfo {journal} {Phys.Rev.Lett.}}\ }%
+  \textbf{\bibinfo {volume} {101}},\ \bibinfo {pages} {071802} (\bibinfo {year}
+  {2008}),\ \Eprint{http://arxiv.org/abs/0802.3887}{arXiv:0802.3887 [hep-ex]}%
+  \bibAnnoteFile{NoStop}{Brigliadori:2008vf}%
+\bibitem{Bergman:2007pm}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{Oren}\ \bibnamefont{Bergman}}, \bibinfo
+  {author} {\bibfnamefont{Shigenori}\ \bibnamefont{Seki}},\ and\ \bibinfo
+  {author} {\bibfnamefont{Jacob}\ \bibnamefont{Sonnenschein}},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Quark mass and condensate in HQCD}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1088/1126-6708/2007/12/037}{\bibinfo {journal} {JHEP}}\ }%
+  \textbf{\bibinfo {volume} {0712}},\ \bibinfo {pages} {037} (\bibinfo {year}
+  {2007}),\ \Eprint{http://arxiv.org/abs/0708.2839}{arXiv:0708.2839 [hep-th]}%
+  \bibAnnoteFile{NoStop}{Bergman:2007pm}%
+\bibitem{Belanger:2010gh}%
+  \BibitemOpen
+  \bibfield{author}{%
+  \bibinfo {author} {\bibfnamefont{G.}~\bibnamefont{Belanger}}, \bibinfo
+  {author} {\bibfnamefont{F.}~\bibnamefont{Boudjema}}, \bibinfo {author}
+  {\bibfnamefont{P.}~\bibnamefont{Brun}}, \bibinfo {author}
+  {\bibfnamefont{A.}~\bibnamefont{Pukhov}}, \bibinfo {author}
+  {\bibfnamefont{S.}~\bibnamefont{Rosier-Lees}}, \emph{et~al.},\ }%
+  \bibfield{title}{%
+  \enquote{\bibinfo {title} {{Indirect search for dark matter with
+  micrOMEGAs2.4}},}\ }%
+  \bibfield{journal}{%
+  \Doi{10.1016/j.cpc.2010.11.033}{\bibinfo {journal} {Comput.Phys.Commun.}}\ }%
+  \textbf{\bibinfo {volume} {182}},\ \bibinfo {pages} {842--856} (\bibinfo
+  {year} {2011}),\ \Eprint{http://arxiv.org/abs/1004.1092}{arXiv:1004.1092
+  [hep-ph]}%
+  \bibAnnoteFile{NoStop}{Belanger:2010gh}%
+\end{thebibliography}%
